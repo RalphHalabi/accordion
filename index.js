@@ -1,14 +1,17 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
+// When any accordion title is clicked
+$(".accordion-title").click(function() {
+  const $accordion_wrapper = $(this).parent();
+  const $accordion_content = $(this).parent().find(".accordion-content").first();
+  const $accordion_open = "accordion-open";
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
+  // If this accordion is already open
+  if ($accordion_wrapper.hasClass($accordion_open)) {
+    $accordion_content.slideUp();                     // Close the content.
+    $accordion_wrapper.removeClass($accordion_open);  // Remove the accordionm-open class.
+  }
+  // If this accordion is not already open
+  else {
+    $accordion_content.slideDown();                 // Show this accordion's content.
+    $accordion_wrapper.addClass($accordion_open);   // Add the accordion-open class.
+  }
+});

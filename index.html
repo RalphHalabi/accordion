@@ -5,24 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accordion</title>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <h2>Accordion</h2>
+  <h1>Nested Accordions</h1>
 
-<button class="accordion">Section 1</button>
-<div class="panel">
-  <p>item 1 preview</p>
-</div>
-
-<button class="accordion">Section 2</button>
-<div class="panel">
-  <p>item 2 preview</p>
-</div>
-
-<button class="accordion">Section 3</button>
-<div class="panel">
-  <p>item 3 prview </p>
-</div>
+  <div class="accordion">
+    <h4 class="accordion-title">
+      Accordion 1
+      <i class="accordion-icon">
+        <div class="line-01"></div>
+        <div class="line-02"></div>
+      </i>
+    </h4>
+    <div class="accordion-content">
+      <div class="accordion accordion-nested">
+        <h4 class="accordion-title">
+         sub Accordion 1
+          <i class="accordion-icon">
+            <div class="line-01"></div>
+            <div class="line-02"></div>
+          </i>
+        </h4>
+        <div class="accordion-content">
+          <p>content</p>
+        </div>
+      </div>
+      <div class="accordion accordion-nested">
+        <h4 class="accordion-title">
+          sub Accordion 2
+          <i class="accordion-icon">
+            <div class="line-01"></div>
+            <div class="line-02"></div>
+          </i>
+        </h4>
+        <div class="accordion-content">
+          <p>content</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion">
+    <h4 class="accordion-title">
+      Accordion 2
+      <i class="accordion-icon">
+        <div class="line-01"></div>
+        <div class="line-02"></div>
+      </i>
+    </h4>
+    <div class="accordion-content">
+      <div class="accordion accordion-nested">
+        <h4 class="accordion-title">
+          sub Accordion 1
+          <i class="accordion-icon">
+            <div class="line-01"></div>
+            <div class="line-02"></div>
+          </i>
+        </h4>
+        <div class="accordion-content">
+          <p>content</p>
+        </div>
+      </div>
+      <div class="accordion accordion-nested">
+        <h4 class="accordion-title">
+          sub Accordion 2
+          <i class="accordion-icon">
+            <div class="line-01"></div>
+            <div class="line-02"></div>
+          </i>
+        </h4>
+        <div class="accordion-content">
+          <p>content</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion">
+    <h4 class="accordion-title">
+      Accordion 3
+      <i class="accordion-icon">
+        <div class="line-01"></div>
+        <div class="line-02"></div>
+      </i>
+    </h4>
+    <div class="accordion-content">
+      <div class="accordion accordion-nested">
+        <h4 class="accordion-title">
+          sub Accordion 1
+          <i class="accordion-icon">
+            <div class="line-01"></div>
+            <div class="line-02"></div>
+          </i>
+        </h4>
+        <div class="accordion-content">
+          <p>content</p>
+        </div>
+      </div>
+      <div class="accordion accordion-nested">
+        <h4 class="accordion-title">
+          sub Accordion 2
+          <i class="accordion-icon">
+            <div class="line-01"></div>
+            <div class="line-02"></div>
+          </i>
+        </h4>
+        <div class="accordion-content">
+          <p>content</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
